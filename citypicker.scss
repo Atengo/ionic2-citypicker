@@ -1,0 +1,128 @@
+.city-picker {
+    z-index: 3;
+    position: absolute;
+    background: #fff;
+    width: 100%;
+    height: 296px;
+    bottom: 0;
+}
+@media not all and (min-height: 600px) and (min-width: 768px){}
+ion-modal ion-backdrop {
+    visibility: visible;
+}
+.modal-wrapper{
+    position: relative;
+}
+.city-picker-header {
+    text-align: right;
+    position: absolute;
+    height: 44px;
+    width: 100%;
+}
+
+.city-picker-inner {
+    margin: 44px 15px;
+}
+
+.city-picker-inner ul {
+    margin: 0;
+    padding: 108px 0;
+}
+
+.city-picker-inner ion-col[width-33] {
+    flex: 1 0 33.3333%;
+    max-width: 50%;
+}
+.city-picker li {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 36px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0 10px;
+    overflow: hidden;
+    line-height: 36px;
+    color: #000;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -webkit-transition: 300ms;
+    -o-transition: 300ms;
+    transition: 300ms;
+}
+
+.city-picker .city-picker-inner {
+    height: 252px;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    padding: 0;
+    font-size: 1.2rem;
+    text-align: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-mask-box-image: -webkit-linear-gradient(bottom, transparent, transparent 5%, white 20%, white 80%, transparent 95%, transparent);
+    -webkit-mask-box-image: linear-gradient(to top, transparent, transparent 5%, white 20%, white 80%, transparent 95%, transparent);
+}
+
+.city-picker ion-content {
+    height: 252px;
+        margin-top: -10px;
+}
+
+.city-picker .picker-center-highlight {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-top: 0px;
+    pointer-events: none;
+}
+
+.city-picker .picker-center-highlight:after {
+    position: absolute;
+    top: auto;
+    right: auto;
+    margin-bottom: -18px;
+    bottom: 0;
+    left: 0;
+    z-index: 15;
+    display: block;
+    width: 100%;
+    height: 50%;
+    content: '';
+    background-color: rgba(255, 255, 255, .4);
+    -webkit-transform-origin: 50% 100%;
+    -ms-transform-origin: 50% 100%;
+    -o-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+}
+
+.city-picker .picker-center-highlight:before {
+    position: absolute;
+    top: 0;
+    right: auto;
+    bottom: auto;
+    left: 0;
+    z-index: 15;
+    display: block;
+    width: 100%;
+    height: 50%;
+    margin-top: -18px;
+    content: '';
+    background-color: rgba(255, 255, 255, .4);
+    -webkit-transform-origin: 50% 0;
+    -ms-transform-origin: 50% 0;
+    -o-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+}

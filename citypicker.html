@@ -1,0 +1,36 @@
+<div class="city-picker">
+    <div class="city-picker-header">
+        <div class="buttons">
+            <button ion-button clear class="button" (click)="cancel('cancel')">取消</button>
+            <button ion-button clear class="button" (click)="cancel('ok')">完成</button>
+        </div>
+    </div>
+    <div class="city-picker-inner">
+        <ion-grid>
+            <ion-row>
+                <ion-col width-33 class="col">
+                    <ion-content #province (ionScrollEnd)="getData('province')">
+                        <ul>
+                            <li *ngFor="let item of cityData">{{item.name}}</li>
+                        </ul>
+                    </ion-content>
+                </ion-col>
+                <ion-col width-33 class="col">
+                    <ion-content #city (ionScrollEnd)="getData('city')">
+                        <ul>
+                            <li *ngFor="let item of cityArr">{{item.name}}</li>
+                        </ul>
+                    </ion-content>
+                </ion-col>
+                <ion-col width-33 class="col">
+                    <ion-content #country (ionScrollEnd)="getData('country')">
+                        <ul>
+                            <li *ngFor="let item of countryArr">{{item.name}}</li>
+                        </ul>
+                    </ion-content>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+        <div class="picker-center-highlight"></div>
+    </div>
+</div>
